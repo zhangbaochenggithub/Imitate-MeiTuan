@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+<view  class="container" style='background:#fff; padding-bottom:10rpx'>
+   <!-- 搜索 -->
+  <view class="search">
+    <text class="search_title">天津</text>
+    <view class="search_box">
+      <icon classs="search_searchIcon" type="search" size='16'></icon>
+      <input class="search_context" type='text' placeholder='请输入上家名、品类或者商圈...'></input>
+    </view>
+    <view class='search_line'></view>
+  </view>
+  <!-- 轮播图 -->
+  <view  class="banner_box">
+     <swiper indicator-dots="true" autoplay="true" circular="true" interval="2000" duration="500" indicator-color="255 255 255 .5" indicator-active-color="#FFF">
+     <block wx:for="{{urlArry}}" wx:key="*this">
+      <swiper-item>
+            <view id="{{item.id}}" class="banner_{{item.num}}"></view>
+      </swiper-item>
+     </block>
+    </swiper>
+  </view>
+  <!-- 入口 -->
+  <view>
+    <view  class="entrance_box" style='margin-top:20rpx'>
+    <view   wx:for="{{entranceArry}}" wx:key="*this">
+      <view id="{{item.id}}" class="entrance_{{item.num}}"></view>
+      <view class="entrance_sub_title">{{item.id}}</view>
+    </view>
+  </view>
+  <view   class="entrance_box">
+    <view   wx:for="{{entranceArry_2}}" wx:key="*this">
+      <view id="{{item.id}}" class="entrance_{{item.num}}"></view>
+      <view class="entrance_sub_title">{{item.id}}</view>
+    </view>
+  </view>
+  </view>
+  <!-- 广告图 -->
+  <view class="banner_image_box">
+  <!-- <image class="banner_image" src="../../images/2ff16ee5f2b7517f5075eee676cdf068013242182f67f-zEPGmF_fw658.jpg" mode='center'></image> -->
+  </view>
+</view>
+<view  class="container" style="background:#fff; padding-top:10rpx;">
+  <view class="groupon_box">
+  <scroll-view class="groupon_context" scroll-x  style='width:100%'>
+    <!-- <view id="{{item.id}}" class="groupon_context_{{item.num}}"></view> -->
+    <view id="one" class="groupon_context_01"></view>
+    <view id="two" class="groupon_context_02"></view>
+    <view id="three" class="groupon_context_03"></view>
+    <view id="four" class="groupon_context_04"></view>
+    <view id="five" class="groupon_context_05"></view>
+    <view id="six" class="groupon_context_06"></view>
+    <view id="seven" class="groupon_context_07"></view>
+  </scroll-view>
+  </view>
+</view>
+ 
+</view>
